@@ -1,22 +1,21 @@
 #include <iostream>
+#include "./include/plant.h"
+
 using namespace std;
+
 
 int main(int argc, char * argv[]){
     int UpSeed;
+    cout << "Ведите длину, на которое растение вырастет за ночь >> ";
     cin >> UpSeed;
     int DownSeed;
+    cout << "Ведите длину, на которое растение уменьшается за ночь >> ";
     cin >> DownSeed;
     int desiredHight;
+    cout << "Ведите длину, на которое растение вырастет за ночь >> ";
     cin >> desiredHight;
-    int desiredHight_n = 0;
-    for (int day = 1; desiredHight_n < desiredHight; day++)
-    {
-        desiredHight_n += UpSeed;
-        cout << "После дня " << day << " --> " << desiredHight_n << endl;
-        if (desiredHight_n >= desiredHight) break;
-        desiredHight_n -= DownSeed;
-        cout << "После ночи " << day << " --> " << desiredHight_n << endl;
-    } 
+
+    plant(UpSeed,DownSeed, desiredHight);
 
     return 0;
 }
