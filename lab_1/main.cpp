@@ -12,7 +12,7 @@ int main(int argc, char * argv[]){
     cout << "Ведите длину, на которое растение уменьшается за ночь >> ";
     cin >> DownSeed;
     int desiredHight;
-    cout << "Ведите длину, на которое растение вырастет за ночь >> ";
+    cout << "Введите окончательную высоту растения >> ";
     cin >> desiredHight;
 
     plant(UpSeed,DownSeed, desiredHight);
