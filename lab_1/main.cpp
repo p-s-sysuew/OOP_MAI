@@ -9,37 +9,64 @@ using namespace std;
 int main(int argc, char * argv[]){
     string UpSeed_n;
     int UpSeed;
-    cout << "Ведите длину, на которое растение вырастет за день >> ";
-    cin >> UpSeed_n;
-    while (!check(UpSeed_n)) 
+    while (true)
     {
-        cout << "Ведите корректное значение >> ";
+        cout << "Ведите длину, на которое растение вырастет за день >> ";
         cin >> UpSeed_n;
+        if (!check(UpSeed_n)) 
+        {
+            cout << "Должно быть корректное значение!\n";
+            continue;
+        }
+        UpSeed = stoi(UpSeed_n);
+        if (UpSeed < 1)
+        {
+            cout << "ДДолжно быть корректное значение\n";
+            continue;
+        }
+        break;
     }
-    UpSeed = stoi(UpSeed_n);
 
 
     string DownSeed_n;
     int DownSeed;
-    cout << "Ведите длину, на которое растение уменьшается за ночь >> ";
-    cin >> DownSeed_n;
-    while (!check(DownSeed_n)) 
+    while (true)
     {
-        cout << "Ведите корректное значение >> ";
+        cout << "Ведите длину, на которое растение уменьшится за ночь >> ";
         cin >> DownSeed_n;
+        if (!check(DownSeed_n)) 
+        {
+            cout << "Должно быть корректное значение!\n";
+            continue;
+        }
+        DownSeed = stoi(DownSeed_n);
+        if (DownSeed < 1)
+        {
+            cout << "Должно быть корректное значение\n";
+            continue;
+        }
+        break;
     }
-    DownSeed = stoi(DownSeed_n);
 
     string desiredHight_n;
     int desiredHight;
-    cout << "Введите окончательную высоту растения >> ";
-    cin >> desiredHight_n;
-    while (!check(desiredHight_n)) 
+    while (true)
     {
-        cout << "Ведите корректное значение >> ";
+        cout << "Ведите длину, которую должно достичь значение >> ";
         cin >> desiredHight_n;
+        if (!check(desiredHight_n)) 
+        {
+            cout << "Должно быть корректное значение!\n";
+            continue;
+        }
+        desiredHight = stoi(desiredHight_n);
+        if (desiredHight < 1)
+        {
+            cout << "Должно быть корректное значение\n";
+            continue;
+        }
+        break;
     }
-    desiredHight = stoi(desiredHight_n);
 
     plant(UpSeed,DownSeed, desiredHight);
 
