@@ -1,5 +1,7 @@
 #include "../include/plant.h"
 #include <iostream>
+#include <string>
+#include <cctype>
 using namespace std;
 
 int plant(int UpSeed,int DownSeed, int desiredHight)
@@ -16,4 +18,12 @@ int plant(int UpSeed,int DownSeed, int desiredHight)
         
     } 
     return day;
+}
+
+bool check(const std::string & input) {
+    for (int i = 0; i < input.length(); i++) {
+        if (!isdigit(input[i]))
+            return false;
+    }
+    return true;
 }
